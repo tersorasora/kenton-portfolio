@@ -1,0 +1,16 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home h1 {
+    font-size: 3rem;
+    color: #E60012;
+    margin-bottom: 20px;
+    text-shadow:
+    3px  3px 0 #cacaca,
+     1px  1px 0 #cacaca;
+}
