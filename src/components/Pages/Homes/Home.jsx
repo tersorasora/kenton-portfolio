@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import transition from '../../Transition/Transition';
 
 const Home = () => {
   return (
@@ -10,4 +11,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default transition(Home);

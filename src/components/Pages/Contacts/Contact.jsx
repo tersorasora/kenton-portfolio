@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import transition from '../../Transition/Transition';
 
 const Contact = () => {
   return (
@@ -10,4 +11,4 @@ const Contact = () => {
   );
 }
 
-export default Contact;
+export default transition(Contact);
