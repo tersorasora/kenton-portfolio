@@ -15,6 +15,7 @@
   max-width: 50%;
   z-index: 2;
   animation: slideInLeft 1s ease-out forwards;
+  margin-left: 10%;
 }
 
 .intro-text h1 {
@@ -46,11 +47,11 @@
 
 .intro-image {
   position: relative;
-  margin-right: 3rem;
+  margin-right: 15%;
 }
 
 .intro-image img {
-  max-width: 400px;
+  max-width: 500px;
   border: 4px solid white;
   transform: rotate(-10deg);
   box-shadow: 10px 10px 0px red;
