@@ -1,5 +1,6 @@
 import React from 'react';
 import './Experiences.css';
+import transition from '../../Transition/Transition';
 
 const Experiences = () => {
   return (
@@ -10,4 +11,4 @@ const Experiences = () => {
   );
 }
 
-export default Experiences;
+export default transition(Experiences);

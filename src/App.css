@@ -4,6 +4,7 @@
     left: 0; 
     width: 100%;
     height: 100vh;
+    z-index: 9999;
     background: #0f0f0f;
     transform-origin: right;
 }
@@ -14,6 +15,7 @@
     left: 0; 
     width: 100%;
     height: 100vh;
+    z-index: 9999;
     background: #0f0f0f;
     transform-origin: left;
 }
