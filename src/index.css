@@ -8,5 +8,12 @@ body{
   margin: 0;
   background-color: #111;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Impact', sans-serif;
+}
+
+@font-face {
+  font-family: 'Expose Regular';
+  src: url('./assets/fonts/Expose-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

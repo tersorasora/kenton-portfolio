@@ -1,16 +1,70 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-.about h1 {
+.about-inner {
+    position: absolute;
+    top: -20vh;
+    left: -20vw;
+    width: 140vw;
+    height: 140vh;
+    transform: rotate(10deg);
+    display: flex;
+    z-index: 1;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    height: 100%;
+}
+
+.left-side {
+    background-color: black;
+    box-shadow: 
+    0px 10px 0px white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-side .nama {
     font-size: 3rem;
-    color: #E60012;
-    margin-bottom: 20px;
-    text-shadow:
-    3px  3px 0 #cacaca,
-     1px  1px 0 #cacaca;
+    margin: 0;
+    color: white;
+}
+
+.left-side .test {
+    font-size: 3rem;
+    margin: 0;
+    color: white;
+}
+
+.left-side h3 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin: 0;
+    color: red;
+}
+
+.left-side h3 span {
+    color: white;
+    margin-left: 20px;
+}
+
+.right-side {
+    background-color: red;
+    box-shadow: 
+    0px -10px 0px white;
+}
+
+.tear-line {
+    width: 15px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background: white;
 }

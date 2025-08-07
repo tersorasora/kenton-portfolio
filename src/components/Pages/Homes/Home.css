@@ -4,7 +4,7 @@
   align-items: center;
   background: linear-gradient(135deg, #ff003c, #000000);
   color: white;
-  padding: 50px;
+  padding: 5%;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -22,8 +22,7 @@
   font-size: 3rem;
   margin: 0;
   text-shadow:
-    3px  3px 0 black,
-     1px  1px 0 black;
+    -5px  5px 0 black;
 }
 
 .intro-text h2 {
@@ -31,18 +30,19 @@
   margin: 0;
   color: #ffffff;
   text-shadow:
-    3px  3px 0 black,
-    1px  1px 0 black;
+    -5px 5px 0px black;
 }
 
 .name {
   background: #000;
   color: #ff003c;
+  margin-left: 1rem;
   padding: 0 10px;
   transform: skew(-10deg);
   display: inline-block;
-  text-shadow:
-    0 0 0 black;
+  text-shadow: none;
+  box-shadow:
+    -5px 5px 0px white;
 }
 
 .intro-image {
