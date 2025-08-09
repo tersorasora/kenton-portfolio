@@ -31,28 +31,76 @@
     flex-direction: column;
 }
 
-.left-side .nama {
-    font-size: 3rem;
-    margin: 0;
-    color: white;
+.left-side-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+    margin-left: 25%;
+    margin-top: -25%;
 }
 
-.left-side .test {
+.left-side .nama {
+    display: flex;
+    justify-content: center;
+    transform: rotate(-6deg);
+    padding: 10px;
+    width: 30vw;
+    height: 12vh;
+    text-align: center;
+    align-items: center;
+    margin-bottom: auto;
+    cursor: pointer;
+    user-select: none;
+
     font-size: 3rem;
-    margin: 0;
-    color: white;
+    letter-spacing: 3px;
+    color: red;
+    background-color: black;
+    outline: 5px solid white;
+    text-shadow: 4px 3px 0px white;
+
+    transition: transform 0.1s ease, outline-color 0.2s ease;
+}
+
+.left-side .nama:hover {
+    transform: scale(1.1) rotate(-4deg);
+    outline: 5px solid red;
+}
+
+.left-side .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: rotate(-6deg);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.left-side .profile .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .left-side h3 {
-    font-size: 2rem;
-    letter-spacing: 3px;
-    margin: 0;
     color: red;
+    white-space: nowrap;
 }
 
 .left-side h3 span {
     color: white;
-    margin-left: 20px;
+}
+
+.radar-chart {
+    position: relative;
+    display: flex;
 }
 
 .right-side {

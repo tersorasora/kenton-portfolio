@@ -1,0 +1,20 @@
+.radar-chart {
+    background-color: rgba(0, 0, 0, 0);
+    transform: rotate(-6deg);
+    display: flex;
+    width: 30vw;
+    height: 30vh;
+    padding-top: 5px;
+    padding-left: 55px;
+    outline: 2px solid white;
+}
+
+.radar-chart polygon {
+    outline: 2px solid yellow;
+}
+
+.radar-chart text {
+    paint-order: stroke;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 3px;
+}
