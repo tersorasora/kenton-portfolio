@@ -40,13 +40,14 @@
     gap: 50px;
     margin-left: 25%;
     margin-top: -25%;
-    animation: slideInLeft 0.5s ease-out forwards;
+    animation: PopInAnimation 0.5s ease-out forwards;
+    /* outline: 2px solid white; */
 }
 
 .left-side .nama {
     display: flex;
     justify-content: center;
-    transform: rotate(-6deg);
+    transform: rotate(-8deg);
     padding: 10px;
     width: 30vw;
     height: 12vh;
@@ -67,7 +68,7 @@
 }
 
 .left-side .nama:hover {
-    transform: scale(1.1) rotate(-4deg);
+    transform: scale(1.1) rotate(-6deg);
     outline: 5px solid red;
 }
 
@@ -75,7 +76,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    transform: rotate(-6deg);
+    transform: rotate(-8deg);
+    width: 45vw;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
@@ -108,6 +110,207 @@
     background-color: red;
     box-shadow: 
     0px -10px 0px white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right-side-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    transform: rotate(-10deg);
+    gap: 7vh;
+    margin-right: 30%;
+    margin-top: -20%;
+    height: 80vh;
+    width: 40vw;
+    animation: PopInAnimationRightSide 0.5s ease-out forwards;
+    /* outline: 2px solid white; */
+}
+
+.right-side .skill {
+    display: flex;
+    font-size: 6rem;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    text-shadow: -8px 6px 0px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    transform: rotate(-3deg);
+    transform-style: preserve-3d;
+    margin-top: -7%;
+    width: 35vw;
+
+    /* background-color: black;
+    width: 30vw;
+    height: 16vh;
+    outline: 5px solid white;
+    transform: rotate(-2deg);
+    box-shadow: 12px 12px 0 #7a0602;  */
+}
+
+.right-side .programming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: flex-start;
+    gap: 10px;
+    width: 32vw;
+    height: 16vh;
+    transform: rotate(-5deg);
+    background-color: black;
+    outline: 5px solid white;
+    box-shadow: 24px 24px 0 #c70e07;
+}
+
+.programming h2 {
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-top: -5%;
+
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: black;
+    outline: 3px solid white;
+}
+
+.programming p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    /* outline: 1px solid white; */
+}
+
+.right-side .framework {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: flex-end;
+    gap: 10px;
+    width: 32vw;
+    height: 16vh;
+    transform: rotate(5deg);
+    background-color: black;
+    outline: 5px solid white;
+    box-shadow: 24px 24px 0 #c70e07;
+}
+
+.framework h2 {
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-end;
+    margin-right: 5%;
+    margin-top: -5%;
+
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: black;
+    outline: 3px solid white;
+}
+
+.framework p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.right-side .others {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: flex-start;
+    gap: 10px;
+    width: 32vw;
+    height: 16vh;
+    transform: rotate(-5deg);
+    background-color: black;
+    outline: 5px solid white;
+    box-shadow: 24px 24px 0 #c70e07;
+}
+
+.others h2 {
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-top: -5%;
+
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: black;
+    outline: 3px solid white;
+}
+
+.others p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .tear-line {
@@ -120,13 +323,24 @@
 
 
 /* Animation Thing */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-70%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+@keyframes PopInAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes PopInAnimationRightSide{
+    0% {
+        transform: rotate(-10deg) scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(-10deg) scale(1);
+        opacity: 1;
+    }
 }

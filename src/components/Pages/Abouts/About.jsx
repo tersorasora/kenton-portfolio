@@ -30,10 +30,23 @@ const About = () => {
                 </div>
               </div>
               <div className="tear-line">
-
               </div>
               <div className="right-side">
-
+                <div className="right-side-container">
+                  <h1 className='skill'>ABILITIES</h1>
+                  <div className="programming">
+                    <h2>PROGRAMMING</h2>
+                    <p>I am capable of using : C (Native), C++, C#, Java, Python, Javascript, PHP, and Dart.</p>
+                  </div>
+                  <div className="framework">
+                    <h2>FRAMEWORK</h2>
+                    <p>I am capable of using : Laravel, React, Bootstrap, Flutter, WinForm, .NET Framework, Unity Framework.</p>
+                  </div>
+                  <div className="others">
+                    <h2>OTHERS</h2>
+                    <p>I am capable of using : Unity Engine, MySQL Database System, Aseprite, and Wondershare Filmora.</p>
+                  </div>
+                </div>
               </div>
           </div>
       </div>

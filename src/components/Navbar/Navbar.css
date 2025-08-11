@@ -17,10 +17,11 @@
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  color: #E60012;
+  color: red;
   letter-spacing: 3px;
   margin-left: 5%;
   font-weight: 400;
+  /* -webkit-text-stroke: 1px white; */
 }
 
 .nav-links {
