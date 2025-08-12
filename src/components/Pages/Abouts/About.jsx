@@ -27,6 +27,13 @@ const About = () => {
                       <h3>GPA: <span>3.79/4.00</span></h3>
                     </div>
                   </div>
+                  <div className='caption'>
+                    <h2>ABOUT ME</h2>
+                    <p>Hi, I'm Kenton — a fresh Informatics graduate with a positive mindset and a laid-back yet 
+                      driven personality. I'm seeking opportunities across the technology field, where I can contribute 
+                      to and grow from projects in website development, mobile app development, game creation, AI 
+                      engineering, and beyond. I thrive on being part of impactful IT projects and bringing ideas to life.</p>
+                  </div>
                 </div>
               </div>
               <div className="tear-line">
@@ -36,15 +43,15 @@ const About = () => {
                   <h1 className='skill'>ABILITIES</h1>
                   <div className="programming">
                     <h2>PROGRAMMING</h2>
-                    <p>I am capable of using : C (Native), C++, C#, Java, Python, Javascript, PHP, and Dart.</p>
+                    <p>I am capable for using programming languages, including C (Native), C++, C#, Java, Python, JavaScript, PHP, and Dart.</p>
                   </div>
                   <div className="framework">
                     <h2>FRAMEWORK</h2>
-                    <p>I am capable of using : Laravel, React, Bootstrap, Flutter, WinForm, .NET Framework, Unity Framework.</p>
+                    <p>I am experienced in leveraging powerful frameworks such as Laravel, React, Bootstrap, Flutter, WinForms, and .NET Framework.</p>
                   </div>
                   <div className="others">
                     <h2>OTHERS</h2>
-                    <p>I am capable of using : Unity Engine, MySQL Database System, Aseprite, and Wondershare Filmora.</p>
+                    <p>I am skilled in using Unity Engine, MySQL Database Systems, Aseprite for pixel art, and Wondershare Filmora for professional video editing.</p>
                   </div>
                 </div>
               </div>

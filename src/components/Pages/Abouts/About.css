@@ -35,11 +35,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
-    gap: 50px;
-    margin-left: 25%;
-    margin-top: -25%;
+    gap: 6vh;
+    transform: rotate(-10deg);
+    margin-left: 30%;
+    margin-top: 5%;
+    height: 80vh;
+    width: 40vw;
     animation: PopInAnimation 0.5s ease-out forwards;
     /* outline: 2px solid white; */
 }
@@ -47,13 +50,12 @@
 .left-side .nama {
     display: flex;
     justify-content: center;
-    transform: rotate(-8deg);
+    transform: rotate(-3deg);
     padding: 10px;
     width: 30vw;
     height: 12vh;
     text-align: center;
     align-items: center;
-    margin-bottom: auto;
     cursor: pointer;
     user-select: none;
 
@@ -76,7 +78,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    transform: rotate(-8deg);
+    transform: rotate(-2deg);
     width: 45vw;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -101,9 +103,51 @@
     color: white;
 }
 
-.radar-chart {
-    position: relative;
+.caption {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: center;
+    gap: 10px;
+    width: 40vw;
+    height: 28vh;
+    margin-top: 15%;
+    transform: rotate(3deg);
+    background-color: black;
+    outline: 5px solid white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caption h2 {
+    z-index: 99;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    margin-top: -5%;
+    margin-left: 30%;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: black;
+    outline: 3px solid white;
+}
+
+.caption p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .right-side {
@@ -129,7 +173,8 @@
     margin-top: -20%;
     height: 80vh;
     width: 40vw;
-    animation: PopInAnimationRightSide 0.5s ease-out forwards;
+    animation: PopInAnimation 0.5s ease-out forwards;
+    user-select: none;
     /* outline: 2px solid white; */
 }
 
@@ -324,17 +369,6 @@
 
 /* Animation Thing */
 @keyframes PopInAnimation {
-    0% {
-        transform: scale(0.5);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes PopInAnimationRightSide{
     0% {
         transform: rotate(-10deg) scale(0.5);
         opacity: 0.5;
