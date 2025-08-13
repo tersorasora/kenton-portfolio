@@ -44,7 +44,6 @@
     height: 80vh;
     width: 40vw;
     animation: PopInAnimation 0.5s ease-out forwards;
-    /* outline: 2px solid white; */
 }
 
 .left-side .nama {
@@ -111,12 +110,13 @@
     align-self: center;
     gap: 10px;
     width: 40vw;
-    height: 28vh;
+    height: 30vh;
     margin-top: 15%;
-    transform: rotate(3deg);
+    transform: rotate(5deg);
     background-color: black;
     outline: 5px solid white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: -32px 32px 0 rgba(85, 85, 85, 0.582);
 }
 
 .caption h2 {
@@ -127,8 +127,8 @@
     width: auto;
     height: auto;
     padding: 15px;
-    margin-top: -5%;
-    margin-left: 30%;
+    margin-top: -3%;
+    margin-left: 60%;
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -179,6 +179,7 @@
 }
 
 .right-side .skill {
+    position: relative;
     display: flex;
     font-size: 6rem;
     font-weight: 900;
@@ -195,13 +196,21 @@
     transform-style: preserve-3d;
     margin-top: -7%;
     width: 35vw;
+    /* overflow: hidden; */
+}
 
-    /* background-color: black;
-    width: 30vw;
-    height: 16vh;
-    outline: 5px solid white;
-    transform: rotate(-2deg);
-    box-shadow: 12px 12px 0 #7a0602;  */
+.right-side .skill::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    width: 10vw;
+    background: rgba(255, 210, 60, 0.863);
+    clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spinSpark 6s linear infinite;
+    z-index: -9; 
 }
 
 .right-side .programming {
@@ -226,8 +235,9 @@
     justify-content: center;
     text-align: center;
     align-self: flex-start;
-    margin-left: 5%;
+    margin-left: -5%;
     margin-top: -5%;
+    transform: rotate(-4deg);
 
     font-size: 1rem;
     font-weight: 900;
@@ -268,7 +278,7 @@
     transform: rotate(5deg);
     background-color: black;
     outline: 5px solid white;
-    box-shadow: 24px 24px 0 #c70e07;
+    box-shadow: -24px 24px 0 #c70e07;
 }
 
 .framework h2 {
@@ -278,8 +288,9 @@
     justify-content: center;
     text-align: center;
     align-self: flex-end;
-    margin-right: 5%;
+    margin-right: -5%;
     margin-top: -5%;
+    transform: rotate(4deg);
 
     font-size: 1rem;
     font-weight: 900;
@@ -329,8 +340,9 @@
     justify-content: center;
     text-align: center;
     align-self: flex-start;
-    margin-left: 5%;
+    margin-left: -5%;
     margin-top: -5%;
+    transform: rotate(-4deg);
 
     font-size: 1rem;
     font-weight: 900;
@@ -377,4 +389,9 @@
         transform: rotate(-10deg) scale(1);
         opacity: 1;
     }
+}
+
+@keyframes spinSpark {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }

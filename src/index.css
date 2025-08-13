@@ -9,6 +9,7 @@ body{
   background-color: #111;
   color: white;
   font-family: 'Impact', sans-serif;
+  overflow: hidden;
 }
 
 @font-face {
