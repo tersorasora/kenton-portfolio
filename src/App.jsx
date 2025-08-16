@@ -18,11 +18,11 @@ function App() {
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experiences" element={<Experiences />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/kenton-portfolio/" element={<Home />} />
+          <Route path="/kenton-portfolio/about" element={<About />} />
+          <Route path="/kenton-portfolio/projects" element={<Projects />} />
+          <Route path="/kenton-portfolio/experiences" element={<Experiences />} />
+          <Route path="/kenton-portfolio/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
     </div>
