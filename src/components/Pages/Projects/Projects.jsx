@@ -1,21 +1,25 @@
 import React, {useState} from 'react';
 import './Projects.css';
 import transition from '../../Transition/Transition';
+import { span } from 'framer-motion/client';
 
 const projectList = [
   {
     name: "ATMA",
     nameSecond: "KITCHEN",
     description: "A web-based platform for online food ordering, integrated with a smart system to manage food expiration and reduce waste.",
-    buildTech: "Laravel, Bootstrap, MySQL Database, HTML, CSS, JavaSCript, PHP",
+    techStack: "Laravel, Bootstrap, MySQL Database, HTML, CSS, JavaSCript, PHP",
     projectType: "WEBSITE",
     dificulty: "4",
+    images: [
+
+    ],
   },
   {
     name: "SOULS",
     nameSecond: "MERGE",
     description: "A 2D pixel art game featuring souls-like open-world exploration and core RPG mechanics.",
-    buildTech: "Unity, C#, Aseprite",
+    techStack: "Unity, C#, Aseprite",
     projectType: "DESKTOP GAME",
     dificulty: "6",
   },
@@ -24,9 +28,18 @@ const projectList = [
     nameSecond: "OPERATING",
     nameThird: "SYSTEM",
     description: "UI control system for the Indonesian Air Force flight simulation, integrated with X-Plane 12 DataRef.",
-    buildTech: "Windows Forms, C#, C++, .Net Framework, X-Plane SDK",
+    techStack: "Windows Forms, C#, C++, .Net Framework, X-Plane SDK",
     projectType: "WINDOWS APPLICATION",
     dificulty: "7",
+  },
+  {
+    name: "THIS",
+    nameSecond: "PORTFOLIO",
+    nameThird: "WEBSITE",
+    description: "A personal portfolio website showcasing my projects and skills. Highly influenced by the design of Persona 5 UI Style",
+    techStack: "React, CSS, HTML, JavaScript",
+    projectType: "WEBSITE",
+    dificulty: "1",
   }
 ];
 
@@ -49,7 +62,7 @@ const Projects = () => {
     <div className="background-project">
       <div className="project">
         <div className="project-name">
-          <button className="arrow-btn" onClick={prevProject}><i className="fas fa-caret-left"></i></button>
+          <button className={currentIndex <= 0 ? "arrow-btn-disabled left" : "arrow-btn left"} onClick={prevProject}><i className="fas fa-caret-left"></i></button>
           <h2>
             <span className='name-first'>{projectList[currentIndex].name}</span>
             <span className='name-second'>{projectList[currentIndex].nameSecond}</span>
@@ -57,7 +70,7 @@ const Projects = () => {
               <span className="name-third">{projectList[currentIndex].nameThird}</span>
             )}
           </h2>
-          <button className="arrow-btn" onClick={nextProject}><i className="fas fa-caret-right"></i></button>
+          <button className={currentIndex >= projectList.length - 1 ? "arrow-btn-disabled right" : "arrow-btn right"} onClick={nextProject}><i className="fas fa-caret-right"></i></button>
         </div>
         <div className="project-content">
           <div className="project-images">
@@ -68,14 +81,25 @@ const Projects = () => {
               <h3>{projectList[currentIndex].projectType}</h3>
             </div>
             <div className="project-dificulty">
-              <h3>Dificulties : {projectList[currentIndex].dificulty} &#9733;&#9733;&#9733;&#9734;&#9734;</h3>
+              <h3>DIFFICULTIES</h3>
+              <div className="stars">
+                {Array.from({ length: 10 }).map((_, index) => (
+                  <span key={index} className={index < projectList[currentIndex].dificulty ? "star-filled" : "star-empty"}>  
+                    &#9733;
+                  </span>  
+                ))}
+              </div>
             </div>
             <div className="project-description">
               <p>{projectList[currentIndex].description}</p>
             </div>
-            <div className="project-build-tech">
-              <h3>Build with:</h3>
-              <p>{projectList[currentIndex].buildTech}</p>
+            <div className="project-tech">
+              <h3>TECH STACK</h3>
+              <div className="tech-stack">
+                {projectList[currentIndex].techStack.split(', ').map((tech, index) => (
+                  <span key={index} className="tech-item">{tech}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
