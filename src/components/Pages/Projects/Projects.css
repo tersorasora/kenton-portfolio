@@ -141,15 +141,41 @@
 }
 
 .project-images {
-    outline: 3px solid white;
-    width: 27vw;
+    /* outline: 3px solid white; */
+    width: 30vw;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.image-1 {
+    align-self: flex-end;
+    width: 90%;
+    height: 45%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: -5px 5px 0px black;
+    transform: rotate(-2deg) skew(4deg);
+}
+
+.image-2 {
+    align-self: flex-start;
+    width: 90%;
+    height: 45%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: -5px 5px 0px black;
+    transform: rotate(2deg) skew(-4deg);
+}
+
+.no-image {
+    color: black;
 }
 
 .project-texts {
     /* outline: 3px solid white; */
-    width: 38vw;
+    width: 35vw;
     height: 100%;
     display: flex;
     flex-direction: column;

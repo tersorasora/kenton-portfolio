@@ -1,7 +1,26 @@
 import React, {useState} from 'react';
 import './Projects.css';
 import transition from '../../Transition/Transition';
-import { span } from 'framer-motion/client';
+import { image, span } from 'framer-motion/client';
+import { color } from 'framer-motion';
+
+// IMAGES
+import atmaKitchenAdmin from '../../../assets/Image/projects/atma-kitchen admin page.png';
+import atmaKitchenCart from '../../../assets/Image/projects/atma-kitchen cart page.png';
+import atmaKitchenLanding from '../../../assets/Image/projects/atma-kitchen landing page.png';
+import atmaKitchenLogin from '../../../assets/Image/projects/atma-kitchen login page.png';
+
+import myTicketLogin from '../../../assets/Image/projects/My-Ticketz login.png';
+import myTicketTicket from '../../../assets/Image/projects/My-Ticketz Ticket.png';
+
+import soulmerge1 from '../../../assets/Image/projects/soul-merge main menu.png';
+import soulmerge2 from '../../../assets/Image/projects/soul-merge exploration.png';
+
+import IOS1 from '../../../assets/Image/projects/IOS map.png';
+import IOS2 from '../../../assets/Image/projects/IOS recorder.png';
+
+import this1 from '../../../assets/Image/projects/this 1.png';
+import this2 from '../../../assets/Image/projects/this 2.png';
 
 const projectList = [
   {
@@ -12,7 +31,8 @@ const projectList = [
     projectType: "WEBSITE",
     dificulty: "4",
     images: [
-
+      atmaKitchenLogin,
+      atmaKitchenCart,
     ],
   },
   {
@@ -21,7 +41,23 @@ const projectList = [
     description: "A 2D pixel art game featuring souls-like open-world exploration and core RPG mechanics.",
     techStack: "Unity, C#, Aseprite",
     projectType: "DESKTOP GAME",
-    dificulty: "6",
+    dificulty: "7",
+    images: [
+      soulmerge1,
+      soulmerge2,
+    ],
+  },
+  {
+    name: "MY",
+    nameSecond: "TICKETZ",
+    description: "A web-based train ticketing system. It allows users to book tickets, claim vouchers, and manage their bookings.",
+    techStack: "Laravel, Bootstrap, MySQL Database, HTML, CSS, JavaSCript, PHP",
+    projectType: "WEBSITE",
+    dificulty: "2",
+    images: [
+      myTicketLogin,
+      myTicketTicket,
+    ],
   },
   {
     name: "INSTRUMENT",
@@ -30,7 +66,11 @@ const projectList = [
     description: "UI control system for the Indonesian Air Force flight simulation, integrated with X-Plane 12 DataRef.",
     techStack: "Windows Forms, C#, C++, .Net Framework, X-Plane SDK",
     projectType: "WINDOWS APPLICATION",
-    dificulty: "7",
+    dificulty: "8",
+    images: [
+      IOS1,
+      IOS2,
+    ],
   },
   {
     name: "THIS",
@@ -40,6 +80,10 @@ const projectList = [
     techStack: "React, CSS, HTML, JavaScript",
     projectType: "WEBSITE",
     dificulty: "1",
+    images: [
+      this1,
+      this2,
+    ],
   }
 ];
 
@@ -74,7 +118,13 @@ const Projects = () => {
         </div>
         <div className="project-content">
           <div className="project-images">
-
+            {projectList[currentIndex].images.length > 0 ? (
+              projectList[currentIndex].images.map((image, index) => (
+                <img className={index % 2 === 0 ? 'image-1' : 'image-2'} key={index} src={image} alt='test'/>
+              ))
+            ) : (
+              <span className="no-image">No images available</span>
+            )}
           </div>
           <div className="project-texts">
             <div className="project-type">

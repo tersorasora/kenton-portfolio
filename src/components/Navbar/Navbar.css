@@ -58,22 +58,6 @@
   color: #E60012;
 }
 
-.nav-links li a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0%;
-  background: #E60012;
-  transition: width 0.3s ease;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
 .nav-links li.active {
   background-color: black;
   outline: 5px solid whitesmoke;
