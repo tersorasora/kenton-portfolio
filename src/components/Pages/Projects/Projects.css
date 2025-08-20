@@ -154,7 +154,7 @@
     height: 45%;
     object-fit: cover;
     border: 2px solid white;
-    box-shadow: -5px 5px 0px black;
+    box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.7);
     transform: rotate(-2deg) skew(4deg);
 }
 
@@ -164,7 +164,7 @@
     height: 45%;
     object-fit: cover;
     border: 2px solid white;
-    box-shadow: -5px 5px 0px black;
+    box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.7);
     transform: rotate(2deg) skew(-4deg);
 }
 
