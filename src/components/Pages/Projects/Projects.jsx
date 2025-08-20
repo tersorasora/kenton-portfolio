@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './Projects.css';
 import transition from '../../Transition/Transition';
-import { image, span } from 'framer-motion/client';
-import { color } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // IMAGES
 import atmaKitchenAdmin from '../../../assets/Image/projects/atma-kitchen admin page.png';
@@ -16,8 +15,8 @@ import myTicketTicket from '../../../assets/Image/projects/My-Ticketz Ticket.png
 import soulmerge1 from '../../../assets/Image/projects/soul-merge main menu.png';
 import soulmerge2 from '../../../assets/Image/projects/soul-merge exploration.png';
 
-import IOS1 from '../../../assets/Image/projects/IOS map.png';
-import IOS2 from '../../../assets/Image/projects/IOS recorder.png';
+import IOSImage1 from '../../../assets/Image/projects/IOS map.png';
+import IOSImage2 from '../../../assets/Image/projects/IOS recorder.png';
 
 import this1 from '../../../assets/Image/projects/this 1.png';
 import this2 from '../../../assets/Image/projects/this 2.png';
@@ -68,8 +67,8 @@ const projectList = [
     projectType: "WINDOWS APPLICATION",
     dificulty: "8",
     images: [
-      IOS1,
-      IOS2,
+      IOSImage1,
+      IOSImage2,
     ],
   },
   {
@@ -89,14 +88,17 @@ const projectList = [
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState('left');
 
   const prevProject = () => {
+    setSlideDirection('right');
     setCurrentIndex((prev) => 
       prev === 0 ? 0 : prev - 1
     );
   };
 
   const nextProject = () => {
+    setSlideDirection('left');
     setCurrentIndex((prev) => 
       prev === projectList.length - 1 ? projectList.length - 1  : prev + 1
     );
@@ -104,19 +106,33 @@ const Projects = () => {
 
   return (
     <div className="background-project">
+      <AnimatePresence mode="wait">
       <div className="project">
         <div className="project-name">
           <button className={currentIndex <= 0 ? "arrow-btn-disabled left" : "arrow-btn left"} onClick={prevProject}><i className="fas fa-caret-left"></i></button>
-          <h2>
+          <motion.h2
+            key={currentIndex}
+            initial={{ x: slideDirection === 'left' ? 300 : -300, opacity: 0.25 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
             <span className='name-first'>{projectList[currentIndex].name}</span>
             <span className='name-second'>{projectList[currentIndex].nameSecond}</span>
             {projectList[currentIndex].nameThird && (
               <span className="name-third">{projectList[currentIndex].nameThird}</span>
             )}
-          </h2>
+          </motion.h2>
           <button className={currentIndex >= projectList.length - 1 ? "arrow-btn-disabled right" : "arrow-btn right"} onClick={nextProject}><i className="fas fa-caret-right"></i></button>
         </div>
-        <div className="project-content">
+        <motion.div
+          key={currentIndex}
+          initial={{ x: slideDirection === 'left' ? 300 : -300, opacity: 0.25 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 0, opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className='project-content'
+        >
           <div className="project-images">
             {projectList[currentIndex].images.length > 0 ? (
               projectList[currentIndex].images.map((image, index) => (
@@ -152,8 +168,9 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
+      </AnimatePresence>
     </div>
   );
 }
