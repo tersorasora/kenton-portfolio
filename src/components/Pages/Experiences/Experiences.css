@@ -17,21 +17,29 @@
     height: 60vh;
     margin-top: -5%;
     margin-left: -5%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    gap: 1vh;
     user-select: none;
-    background-color: rgba(117, 117, 117, 0.9);
+    background-color: rgba(82, 80, 80, 0.9);
     transform: rotate(-3deg) skew(2deg);
-    box-shadow: -15px 12px 0px rgba(255, 255, 255, 0.9);
+    box-shadow: -15px 12px 0px rgba(167, 166, 166, 0.9);
+    animation: PopInAnimationExperience 0.5s ease-out forwards;
 }
 
-.experiences h1 {
+.header {
     align-self: flex-start;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    align-self: flex-start;
+    justify-content: center;
+    margin-top: 4vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -40,4 +48,117 @@
     background-color: white;
     width: 25vw;
     height: 8vh;
+    transform: rotate(-5deg);
+}
+
+.header h2 {
+    z-index: 100;
+    transform: rotate(-1deg);
+    margin-top: -2vh;
+    margin-right: -5vw;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: rgb(65, 64, 64);
+    text-align: center;
+    align-self: flex-end;
+    text-shadow: -2px -2px 0 whitesmoke, 2px -2px 0 whitesmoke, -2px 2px 0 whitesmoke, 2px 2px 0 whitesmoke;
+}
+
+.content {
+    width: 35vw;
+    height: 35vh;
+    gap: 1.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+    background-color: whitesmoke;
+    transform: rotate(1deg) skew(-5deg);
+}
+
+.experience-name h2 {
+    color: rgb(65, 64, 64); 
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.experience-description {
+    width: 100%;
+    height: 60%;
+    transform: rotate(2deg);
+}
+
+.experience-description p {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+.bottom {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom .page-count {
+    width:  30%;
+    height: 100%;
+    transform: rotate(-5deg) skew(5deg);
+}
+
+.bottom .page-count h3 {
+    color: rgb(185, 183, 183);
+    font-weight: 700;
+    margin-left: 10%;
+    letter-spacing: 1px;
+    text-shadow: -3px 4px 0px black;
+}
+
+.bottom .page-count h3 .index-count {
+    font-size: 3rem;
+}
+
+.bottom .page-count h3 .page-word {
+    font-size: 1.5rem;
+}
+
+.button-page {
+    width: 12vw;
+    height: 7vh;
+    margin-right: -5vw;
+    cursor: pointer;
+    background-color: white;
+    outline: 2px solid black;
+    box-shadow: -7px 7px 0px black;
+    transform: rotate(-10deg) skew(2deg);
+    animation: buttonAnimation 1.5s infinite ease-in-out;
+}
+
+.button-page:hover {
+    background-color: black;
+    outline: 2px solid white;
+    box-shadow: -7px 7px 0px white;
+}
+
+/* Animation Things */
+@keyframes PopInAnimationExperience {
+    0% { transform: scale(0.5) rotate(-3deg) skew(2deg); opacity: 0; }
+    100% { transform: scale(1) rotate(-3deg) skew(2deg); opacity: 1; }
+}
+
+@keyframes buttonAnimation {
+    0% { transform: translateX(0) rotate(-10deg) skew(2deg) }
+    50% { transform: translateX(3px) rotate(-10deg) skew(2deg) }
+    100% { transform: translateX(0) rotate(-10deg) skew(2deg) }
 }
