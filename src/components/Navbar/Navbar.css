@@ -8,22 +8,121 @@
   padding: 5px 10px;
   position: sticky;
   width: 100%;
-  height: 100%;
+  height: 10vh;
   box-sizing: border-box;
   top: 0;
   z-index: 99999;
-  box-shadow: 0 4px 60px rgba(255, 0, 0, 0.466); 
-  user-select: none; 
+  box-shadow: 0 2px 0px white; 
+  user-select: none;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
+  display: flex;
+  /* font-size: 1.8rem; */
   color: red;
   letter-spacing: 3px;
   margin-left: 5%;
   font-weight: 400;
+  width: 30vw;
+  height: 100%;
+  
   /* -webkit-text-stroke: 1px white; */
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.logo h1 span {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+}
+
+.P {
+  color: white;
+  background-color: black;
+  outline: 2px solid white;
+  box-shadow: -4px 3px 0px white;
+  transform: rotate(-4deg) skew(-2deg);
+}
+
+.O {
+  color: red;
+  background-color: black;
+  outline: 2px solid white;
+  box-shadow: 4px 3px 0px white;
+  transform: rotate(4deg) skew(2deg);
+
+  align-self: flex-end;
+  scale: 0.8;
+}
+
+.R {
+  color: black;
+  background-color: white;
+  outline: 2px solid black;
+  box-shadow: -4px -3px 0px white;
+  transform: rotate(-1deg) skew(-2deg);
+
+  /* align-self: flex-start; */
+  scale: 1.1;
+}
+
+.T {
+  color: white;
+  background-color: black;
+  outline: 4px solid white;
+  box-shadow: 7px -6px 0px white;
+  transform: rotate(-2deg) skew(0deg);
+
+  align-self: flex-start;
+  scale: 0.7;
+}
+
+.F {
+  color: white;
+  background-color: red;
+  outline: 4px solid white;
+  box-shadow: -7px 6px 0px white;
+
+  scale: 1.1;
+}
+
+.L {
+  color: white;
+  background-color: black;
+  outline: 4px solid white;
+  box-shadow: 7px 6px 0px white;
+  transform: rotate(3deg) skew(2deg);
+
+  scale: 0.9;
+}
+
+.I {
+  color: red;
+  background-color: black;
+  outline: 2px solid white;
+  box-shadow: 3px 5px 0px white;
+  transform: rotate(-1deg) skew(2deg);
+}
+
+.O2 {
+  color: white;
+  background-color: red;
+  outline: 4px solid white;
+  box-shadow: -3px -4px 0px white;
+  transform: rotate(-2deg) skew(-2deg);
+
+  align-self: flex-end;
+  scale: 1.1;
 }
 
 .nav-links {
