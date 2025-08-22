@@ -1,16 +1,93 @@
-.contact {
+.contact-background {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
     height: 100vh;
+
+    background-image: url('../../../assets/Image/ContactMeBackground.png');
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
 }
 
-.contact h1 {
-    font-size: 3rem;
-    color: #E60012;
-    margin-bottom: 20px;
-    text-shadow:
-    3px  3px 0 #cacaca,
-     1px  1px 0 #cacaca;
+.contact-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    margin-top: 5vh;
+    margin-left: 23vw;
+    z-index: 99;
+    width: 40vw;
+    height: 85vh;
+    /* outline: 2px solid white; */
 }
+
+.contact-question {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+
+    width: 25vw;
+    height: 25vh;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    background-image: url('../../../assets/Image/cloudText.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bobbing 1s infinite ease-in-out;
+}
+
+.contact-question h1 {
+    animation: none;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    justify-self: end;
+    gap: 4vh;
+    width: 100%;
+    height: 45vh;
+    /* outline: 3px solid white; */
+}
+
+.contact-content h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30vw;
+    height: 7vh;
+    transform: rotate(-2deg) skew(-5deg);
+
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+    background-color: black;
+    outline: 4px solid white;
+    box-shadow: -8px 10px 0px white;
+    cursor: pointer;
+}
+
+.contact-content h2:hover {
+    color: black;
+    background-color: white;
+    box-shadow: -8px 10px 0px black;
+    outline: 4px solid black;
+    transform: rotate(3deg) skew(5deg) translate(-20px, -5px);
+    scale: 1.1;
+    transition: all 0.15s ease-in-out;
+}
+
+/* Animation Things */
