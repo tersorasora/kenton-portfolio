@@ -62,12 +62,17 @@
     /* outline: 3px solid white; */
 }
 
+.contact-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .contact-content h2 {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 30vw;
+    width: 25vw;
     height: 7vh;
     transform: rotate(-2deg) skew(-5deg);
 
