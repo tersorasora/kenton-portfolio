@@ -49,7 +49,7 @@ const Contact = () => {
         </div>
         <div className="contact-content">
           <a onClick={() => setShowEmailForm(true)}>
-            <h2 className='contact-ig'>Send Me an&nbsp;<span style={{ color: '#fc1c0cff' }}>E-Mail<i className="fa-solid fa-envelope"></i></span></h2>
+            <h2 className='contact-ig'>Drop Me an&nbsp;<span style={{ color: '#fc1c0cff' }}>E-Mail<i className="fa-solid fa-envelope"></i></span></h2>
           </a>
           <a href="https://www.linkedin.com/in/vincentius-kenton" target="_blank" rel="noopener noreferrer">
             <h2>Check My Proflie on&nbsp;<span style={{ color: '#456df3ff' }}>LinkedIn<i className="fa-brands fa-linkedin"></i></span></h2>
@@ -78,18 +78,28 @@ const Contact = () => {
           >
             <div className="email-form-content">
               <div className="form-header">
-                <h2>SEND ME AN E-MAIL</h2>
+                <h2>
+                  <span className='header-get'>GET</span>
+                  <span className='header-in'>IN</span>
+                  <span className='header-touch'>TOUCH</span>
+                </h2>
                 <span className="close-button" onClick={() => setShowEmailForm(false)}><i className="fa-solid fa-xmark"></i></span>
               </div>
               <form ref={form} onSubmit={sendEmail} className="email-form">
                 <div className="form-body">
-                  <div className="form-section">
-                    <h3 className='form-name-text'>NAME</h3>
-                    <input type="text" name="user_name" placeholder="Enter your name" required />
+                  <div className="form-name-subject">
+                    <div className="form-section-name">
+                      <h3 className='form-name-text'>NAME</h3>
+                      <input type="text" name="user_name" placeholder="Enter Your Name" required />
+                    </div>
+                    <div className="form-section-subject">
+                      <h3 className='form-name-text'>SUBJECT</h3>
+                      <input type="text" name="user_subject" placeholder="Enter Subject" required />
+                    </div>
                   </div>
-                  <div className="form-section">
+                  <div className="form-section-email">
                     <h3 className='form-email-text'>E-MAIL</h3>
-                    <input type="email" name="user_email" placeholder="Enter your email" required />
+                    <input type="email" name="user_email" placeholder="Enter Your Email" required />
                   </div>
                   <div className="form-section-message">
                     <h3 className='form-message-text'>MESSAGE</h3>

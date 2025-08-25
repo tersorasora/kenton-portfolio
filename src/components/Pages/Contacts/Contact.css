@@ -110,7 +110,7 @@
 
 .email-form-content {
     width: 60vw;
-    height: 60vh;
+    height: 80vh;
     margin-top: 5vh;
     gap: 5%;
     background-color: black;
@@ -134,6 +134,40 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 1vw;
+    /* outline: 3px solid white; */
+}
+
+.form-header h2 .header-get {
+    color: white;
+    background-color: red;
+    padding: 0 8px;
+    outline: 3px solid white;
+    box-shadow: 6px 5px 0px white;
+    transform: rotate(-4deg) skew(-1deg);
+}
+
+.form-header h2 .header-in {
+    color: black;
+    background-color: white;
+    scale: 0.9;
+    padding: 0 8px;
+    outline: 2px solid black;
+    box-shadow: 6px 5px 0px white;
+    transform: rotate(4deg) skew(2deg);
+}
+
+.form-header h2 .header-touch {
+    color: white;
+    background-color: black;
+    scale: 1.1;
+    padding: 0 8px;
+    outline: 2px solid white;
+    box-shadow: 6px 5px 0px white;
+    transform: rotate(-1deg);
 }
 
 .close-button {
@@ -172,7 +206,36 @@
     gap: 20px;
 }
 
-.email-form .form-section {
+.form-name-subject {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.email-form .form-section-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+    height: auto;
+    position: relative;
+    flex: 1;
+}
+
+.email-form .form-section-subject {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+    height: auto;
+    position: relative;
+    flex: 1;
+}
+
+.email-form .form-section-email {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -186,21 +249,34 @@
     flex-direction: column;
     gap: 5px;
     width: 100%;
-    height: 40%;
+    height: 60%;
     position: relative;
 }
 
 .email-form input {
     width: 100%;
     height: auto;
-    padding: 5px 5px;
+    padding: 0.5rem;
+    line-height: normal;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: white;
     background-color: black;
     outline: 3px solid white;
     box-shadow: 6px 6px 0px white;
+}
+
+.email-form input:focus {
+    outline: 3px solid red;
+    box-shadow: 6px 6px 0px red;
+    caret-color: transparent;
+}
+
+.email-form textarea:focus {
+    outline: 3px solid red;
+    box-shadow: 6px 6px 0px red;
+    caret-color: transparent;
 }
 
 .email-form textarea {
