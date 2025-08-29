@@ -112,16 +112,24 @@ const Contact = () => {
           </motion.div>
         )}
         {showNotification && (
-          <motion.div
-            initial={{ x: -800, opacity: 0.5 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 400, opacity: 0 }}
-            transition={{ duration: 0.1, ease: "easeInOut" }}
-            className="email-notification"
-          >
-            <h3 className='notify-message'>MESSAGE</h3>
-            <h3 className='notify-sent'>SENT!</h3>
-          </motion.div>
+          <div className="email-notification">
+            <motion.div
+              initial ={{ x: -800, opacitx: 1 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 800, opacity: 0 }}
+              transition={{ duration: 0.15, ease: "easeInOut" }}
+            >
+              <h3 className='notify-message'>MESSAGE</h3>
+            </motion.div>
+            <motion.div
+              initial ={{ x: 800, opacity: 1 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -800, opacity: 0 }}
+              transition={{ duration: 0.15, ease: "easeInOut" }}
+            >
+              <h3 className='notify-sent'>SENT!</h3>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </div>
