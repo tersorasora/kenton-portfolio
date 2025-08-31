@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import transition from '../../Transition/Transition';
-import profile from '../../../assets/Image/profile.jpg';
+import profile from '../../../assets/Image/profile2.png';
 
 const Home = () => {
   return (
